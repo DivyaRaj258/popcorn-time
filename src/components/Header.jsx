@@ -1,10 +1,14 @@
-import React from 'react';
-
-function Header() {
+function Header(props){
   return (
-    <div>
-      <h1> 🍿 Popcorn time 🍿 </h1>
-    </div>
+      <header>
+          <h1>🍿 Popcorn Time! 🍿</h1>
+
+          { props.numberOfMovies > 0
+              ? <h2>Number of movies: {props.numberOfMovies}</h2>
+              : <h2>Sorry, no movies to display</h2>
+          }
+
+      </header>
   );
 }
 
